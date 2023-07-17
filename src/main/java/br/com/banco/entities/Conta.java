@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,6 +14,12 @@ import javax.persistence.Id;
 public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_conta")
     private Long idConta;
+
+    @Column(name = "nome_responsavel")
     private String nomeResponsavel;
+
+    @OneToMany(mappedBy = "conta")
+    private List<Transferencia> transferencias;
 }
