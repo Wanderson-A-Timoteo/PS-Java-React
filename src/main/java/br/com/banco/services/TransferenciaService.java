@@ -28,4 +28,8 @@ public class TransferenciaService {
         return transferenciaRepository.findByDataTransferenciaBetween(dataInicio, dataFim);
     }
 
+    public List<Transferencia> obterTransferenciasPorNomeOperador(String nomeOperador) {
+        return transferenciaRepository.findByNomeOperadorTransacao(nomeOperador);
+    }
+
 }

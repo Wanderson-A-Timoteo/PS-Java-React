@@ -37,4 +37,9 @@ public class TransferenciaController {
         return transferenciaService.obterTransferenciasPorPeriodo(dataInicio, dataFim);
     }
 
+    @GetMapping(params = "nomeOperador")
+    public List<Transferencia> obterTransferenciasPorNomeOperador(@RequestParam("nomeOperador") String nomeOperador) {
+        return transferenciaService.obterTransferenciasPorNomeOperador(nomeOperador);
+    }
+
 }
