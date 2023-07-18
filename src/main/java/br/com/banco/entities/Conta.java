@@ -1,19 +1,17 @@
 package br.com.banco.entities;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Conta {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -23,6 +21,7 @@ public class Conta {
     @Column(name = "nome_responsavel")
     private String nomeResponsavel;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "conta")
     private List<Transferencia> transferencias;
 }
