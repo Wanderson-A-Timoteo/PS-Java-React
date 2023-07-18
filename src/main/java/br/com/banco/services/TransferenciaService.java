@@ -2,20 +2,16 @@ package br.com.banco.services;
 
 import br.com.banco.entities.Transferencia;
 import br.com.banco.repositories.TransferenciaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@AllArgsConstructor
 @Service
 public class TransferenciaService {
 
-    private final TransferenciaRepository transferenciaRepository;
-
-    @Autowired
-    public TransferenciaService(TransferenciaRepository transferenciaRepository) {
-        this.transferenciaRepository = transferenciaRepository;
-    }
+    private TransferenciaRepository transferenciaRepository;
 
     public List<Transferencia> obterTodasTransferencias() {
         return transferenciaRepository.findAll();

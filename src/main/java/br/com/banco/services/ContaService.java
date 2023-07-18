@@ -2,20 +2,16 @@ package br.com.banco.services;
 
 import br.com.banco.entities.Conta;
 import br.com.banco.repositories.ContaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@AllArgsConstructor
 @Service
 public class ContaService {
 
-    private final ContaRepository contaRepository;
-
-    @Autowired
-    public ContaService(ContaRepository contaRepository) {
-        this.contaRepository = contaRepository;
-    }
+    private ContaRepository contaRepository;
 
     public List<Conta> obterTodasContas() {
         return contaRepository.findAll();
