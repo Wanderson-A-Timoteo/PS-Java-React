@@ -20,4 +20,8 @@ public class TransferenciaService {
     public List<Transferencia> obterTodasTransferencias() {
         return transferenciaRepository.findAll();
     }
+
+    public Transferencia criarTransferencia(Transferencia transferencia) {
+        return transferenciaRepository.save(transferencia);
+    }
 }

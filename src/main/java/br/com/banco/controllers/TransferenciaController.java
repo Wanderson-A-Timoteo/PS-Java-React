@@ -3,9 +3,7 @@ package br.com.banco.controllers;
 import br.com.banco.entities.Transferencia;
 import br.com.banco.services.TransferenciaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,10 @@ public class TransferenciaController {
     @GetMapping
     public List<Transferencia> obterTodasTransferencias() {
         return transferenciaService.obterTodasTransferencias();
+    }
+
+    @PostMapping
+    public Transferencia criarTransferencia(@RequestBody Transferencia transferencia) {
+        return transferenciaService.criarTransferencia(transferencia);
     }
 }

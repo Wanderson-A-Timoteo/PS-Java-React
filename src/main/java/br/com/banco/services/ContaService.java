@@ -20,4 +20,8 @@ public class ContaService {
     public List<Conta> obterTodasContas() {
         return contaRepository.findAll();
     }
+
+    public Conta criarConta(Conta conta) {
+        return contaRepository.save(conta);
+    }
 }
