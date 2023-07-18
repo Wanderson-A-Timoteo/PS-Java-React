@@ -32,4 +32,9 @@ public class TransferenciaService {
         return transferenciaRepository.findByNomeOperadorTransacao(nomeOperador);
     }
 
+    public List<Transferencia> obterTransferenciasPorPeriodoENomeOperador(
+            LocalDateTime dataInicio, LocalDateTime dataFim, String nomeOperador) {
+        return transferenciaRepository.findByDataTransferenciaBetweenAndNomeOperadorTransacao(dataInicio, dataFim, nomeOperador);
+    }
+
 }

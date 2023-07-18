@@ -42,4 +42,12 @@ public class TransferenciaController {
         return transferenciaService.obterTransferenciasPorNomeOperador(nomeOperador);
     }
 
+    @GetMapping(params = {"dataInicio", "dataFim", "nomeOperador"})
+    public List<Transferencia> obterTransferenciasPorPeriodoENomeOperador(
+            @RequestParam("dataInicio") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataInicio,
+            @RequestParam("dataFim") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataFim,
+            @RequestParam("nomeOperador") String nomeOperador) {
+        return transferenciaService.obterTransferenciasPorPeriodoENomeOperador(dataInicio, dataFim, nomeOperador);
+    }
+
 }
