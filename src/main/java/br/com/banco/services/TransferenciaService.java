@@ -21,7 +21,7 @@ public class TransferenciaService {
     private ContaRepository contaRepository;
 
     public TransferenciaResponseDto obterTodasTransferencias() {
-        List<Transferencia> transferencias = transferenciaRepository.findAll();
+        List<Transferencia> transferencias = transferenciaRepository.findAllObterTodasTransferencias();
         BigDecimal saldoTotalNoPeriodo = BigDecimal.ZERO;
         BigDecimal gastos = BigDecimal.ZERO;
 

@@ -13,3 +13,6 @@ INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_tra
 INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_transacao, conta_id) VALUES (10,'2023-08-07 08:12:45+03',530.50,'TRANSFERENCIA SAIDA', 'Beltrano',2);
 INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_transacao, conta_id) VALUES (11,'2023-06-08 10:15:01+03',3241.23,'TRANSFERENCIA ENTRADA', 'Ronnyscley',1);
 INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_transacao, conta_id) VALUES (12,'2023-04-01 12:12:04+03',5173.09,'TRANSFERENCIA SAIDA', 'Ronnyscley',2);
+INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_transacao, conta_id) VALUES (13,'2023-06-08 17:15:01+03',411.23,'Tranferencia Entrada', 'Beltrano',2);
+INSERT INTO transferencia (id,data_transferencia, valor, tipo, nome_operador_transacao, conta_id) VALUES (14,'2023-08-07 08:12:45+03',1530.50,'Transferência Saída', 'Beltrano',2);
+
